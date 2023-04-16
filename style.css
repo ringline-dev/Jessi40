@@ -1,0 +1,431 @@
+:root{
+    box-sizing: border-box;
+}
+
+*,::before,::after{
+    box-sizing: inherit;
+}
+
+body{
+    background-color: pink;
+    font-family: "Comic Sans MS", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    margin: 0;
+    text-align: center;
+}
+
+.easteregg{
+    display: block;
+    background-image: url('ei.png');
+    background-size: contain;
+    height: 35px;
+    width: 31px;
+    background-repeat: no-repeat;
+    animation: 4s eggs infinite;
+}
+
+#easteregg1{
+    position: relative;
+    top:1px;
+    left: 12px;
+}
+
+#easteregg2{
+    position: relative;
+    top: -259px;
+    left: -82px;
+    opacity: 0.6;
+}
+
+#easteregg3{
+    position: relative;
+    top:35px;
+    left: 351px;
+}
+
+.easteregg4{
+    display: inline-block;
+}
+
+a.easteregg4{
+    cursor: default;
+}
+
+#easteregg5{
+    height: 18px;
+    background-size: cover;
+    position: relative;
+    top:60px;
+    left: 46.2%;
+}
+#easteregg6{
+    display: inline-block;
+    opacity: 0.3;
+}
+
+.zoom{
+    height:100vh;  
+    width:100%;  
+    font-size: 3.1rem;
+    position:fixed;  
+    top:0;  
+    left:0;
+}
+
+.ascii{
+    color: #282828;
+    white-space: pre;
+    letter-spacing: 0;
+    line-height: 1.4;
+    font-family: 'Consolas', 'BitstreamVeraSansMono', 'CourierNew', Courier,
+    monospace;
+}
+
+li#easterquestion{
+    list-style-image: url('ei_klein.png');
+}
+
+.news{
+    background-color: aquamarine;
+    color:yellow;
+    font-size: 4vw;
+    position: absolute;
+    padding: 0.6em 1.2em;
+    border-radius: 10%;
+    text-shadow: 2px 2px 2px purple;
+    box-shadow: 20px 20px 5px darkcyan;
+    top: 50px;
+    left: 5%;
+    animation: 3s news infinite alternate;
+    z-index: 200;
+    white-space: nowrap;
+}
+
+.news.r {
+    background-color: rgb(20,80,187);
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 10px 10px 4px whitesmoke;
+    animation: 4s bounce infinite;
+}
+
+.lama{
+    margin: 10px 0 20px -10px;
+    height: 100px;
+    width: 110%;
+    background-image: url('lama.png');
+    background-size: contain;
+    background-repeat: repeat-x;
+    animation: 2s lamas infinite;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+ul{
+    background-color: aliceblue;
+    padding: 6px 6px 6px 20px;
+}
+
+ul.special{
+    list-style-image: url('baum_klein.png');
+}
+
+li{
+    padding: 3px 0;
+}
+
+li>a{
+    text-decoration-color: lightpink;
+    cursor: pointer;
+}
+
+li>a:link, li>a:visited{
+    color: black;
+}
+
+li>a:hover, li>a:active{
+    color: darkmagenta;
+}
+
+.cat{
+    width: 300px;
+    height: 270px;
+    background-image: url('cat.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: 2s cat infinite;
+}
+
+.jessi{
+    margin: 10px;
+}
+
+.alt{
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px;
+    width: 100%;
+    background-color: deeppink;
+    color: gold;
+}
+
+.block{
+    padding: 0 10px;
+    width: 95%
+}
+
+.block li{
+    list-style-type: square;
+}
+
+.block input[type="text"]{
+    width: 100%;
+    height: 30px;
+}
+
+.hl{
+    width: 90%;
+    font-size: 1.4em;
+    background-color: darkgrey;
+    color: darkblue;
+    text-align: center;
+    padding: 4px 8px;
+    margin: 0 4px;
+    border: 2px solid darkblue;
+    border-radius: 10px;
+}
+
+.kaffee{
+    padding: 10px 5px 0 10px;
+    float: left;
+}
+
+.kaffee img{
+    width: 95%;
+    border-radius: 20px;
+}
+
+.video{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    font-size: 0.8em;
+    width: 100%;
+    height: 350px;
+    background-image: url('video.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+button{
+    padding: 3px 5px;
+}
+
+.image-box{
+    width: 95%;
+    height: 300px;
+    background: url("MicrosoftTeams-image.jpg");
+    background-size: cover;
+    margin: 15px auto;
+    animation: 30s slider infinite;
+    transition: background-image 2s;
+    z-index: -10;
+}
+.beten{
+    font-size: 1.4em;
+    margin: 10px auto;
+    padding: 10px;
+}
+.klein{
+    margin: 0;
+    font-size: 0.3em;
+    font-weight: lighter;
+}
+h4, h5{
+    margin-bottom: 2px;
+}
+
+.bible{
+    color: crimson;
+}
+
+.betbild{
+    width: 90%;
+    max-width: 600px;
+    border-radius: 50%;
+    border: 10px solid goldenrod;
+}
+
+.robbe{
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px whitesmoke;
+}
+
+@keyframes eggs{
+    00% {
+        transform: rotate(-7deg);
+    }
+    3% {
+        transform: rotate(7deg);
+    }
+    6% {
+        transform: rotate(-5deg);
+    }
+    9% {
+        transform: rotate(3deg);
+    }
+}
+
+@keyframes news{
+    10% {
+        top: 300px;
+        left: 15%;
+        transform: rotate3d(1, 1, 1, 30deg);
+    }
+    20% {
+        top: 450px;
+        left: 20%;
+        transform: rotate3d(20, 3, 2, -150deg);
+    }
+    30% {
+        top: 50px;
+        left: 30%;
+        transform: rotate3d(2, 2, 1, 40deg);
+    }
+    40% {
+        top: 250px;
+        left: 40%;
+        transform: rotate3d(3, 1, 2, 50deg);
+    }
+    50% {
+        top: 150px;
+        left: 45%;
+        transform: rotate3d(1, 2, 30, 90deg);
+    }
+    60% {
+        top: 200px;
+        left: 50%;
+        transform: rotate3d(1, 1, 1, 150deg);
+    }
+    70% {
+        top: 250px;
+        left: 45%;
+        transform: rotate3d(-1, -1, 1, -240deg);
+    }
+    80% {
+        top: 550px;
+        left: 40%;
+        transform: rotate3d(-11, 2, 1, 30deg);
+    }
+    90% {
+        top: 150px;
+        left: 35%;
+        transform: rotate3d(1, 1, 1, 20deg);
+    }
+    100% {
+        top: 50px;
+        left: 10%;
+        transform: rotate3d(1, 1, 3, -20deg);
+    }
+}
+
+@keyframes lamas {
+    10%  {margin-left: -15px;}
+    20%  {margin-left: -20px;}
+    30% {margin-left: -25px;}
+    40% {margin-left: -30px;}
+    50% {margin-left: -35px;}
+    60% {margin-left: -30px;}
+    70% {margin-left: -25px;}
+    80% {margin-left: -20px;}
+    90% {margin-left: -15px;}
+  }
+
+  @keyframes cat{
+    25% {transform: skew(10deg);}
+    50% {transform: skew(-10deg);}
+    75% {transform: skew(10deg);}
+  }
+
+  @keyframes slider{
+    8%{
+        background: url("MicrosoftTeams-image2.jpg");
+        background-size: cover;
+        transform:rotate(8deg);
+    }
+
+    16%{
+        background: url("MicrosoftTeams-image3.jpg");
+        background-size: cover;
+        transform:rotate(16deg);
+    }
+
+    24%{
+        background: url("MicrosoftTeams-image4.jpg");
+        background-size: cover;
+        transform:rotate(7deg);
+    }
+
+    32%{
+        background: url("MicrosoftTeams-image6.jpg");
+        background-size: cover;
+        transform:rotate(2deg);
+    }
+
+    40%{
+        background: url("MicrosoftTeams-image7.jpg");
+        background-size: cover;
+        transform:rotate(-5deg);
+    }
+
+    48%{
+        background: url("MicrosoftTeams-image8.jpg");
+        background-size: cover;
+        transform:rotate(-12deg);
+    }
+
+    56%{
+        background: url("MicrosoftTeams-image9.jpg");
+        background-size: cover;
+        transform:rotate(-4deg);
+    }
+
+    64%{
+        background: url("MicrosoftTeams-image10.jpg");
+        background-size: cover;
+        transform:rotate(5deg);
+    }
+
+    72%{
+        background: url("MicrosoftTeams-image11.jpg");
+        background-size: cover;
+        transform:rotate(9deg);
+    }
+
+    80%{
+        background: url("MicrosoftTeams-image12.jpg");
+        background-size: cover;
+        transform:rotate(6deg);
+    }
+
+    88%{
+        background: url("MicrosoftTeams-image13.jpg");
+        background-size: cover;
+        transform:rotate(-3deg);
+    }
+}
+
+@keyframes bounce{
+    25% {top: 70vh;}
+    50% {top: 200px;}
+    75% {top: 70vh;}
+    100% {top: 200px;}
+}

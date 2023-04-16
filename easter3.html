@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RRFAQ</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body,
+        .jumbotron {
+            padding: 30px;
+            background: #efefef;
+        }
+
+        .accordion {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            font-size: 34px + 0.4vw;
+        }
+
+        .headline{
+            font-size: 40px;
+            color: #c00c00;
+        }
+
+        .question {
+            border-top: 1px solid #eee;
+            padding: 20px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .question h2 {
+            font-size: 1.8em;
+            margin: 0;
+            color: #c00c00;
+        }
+
+        .question .glyphicon {
+            position: absolute;
+            right: 10px;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+        }
+
+        .answer p {
+            padding: 20px;
+        }
+
+        .accordion li.open .question .glyphicon {
+            transform: rotate(180deg);
+        }
+
+        .accordion li.open .answer {
+            max-height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="headline">
+            RRFAQ <small>- Really Really Frequently Asked Questions</small>
+        </div>
+        <div class="accordion">
+            <ul class="list-unstyled">
+                <li>
+                    <div class="question">
+                        <h2>Frohe Ostern!</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>Das ist gar keine Frage? Richtig! 100 Punkte im Aufmerksamkeitstest.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Wie geht es dir?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>Wenn ich mir dich so anschaue: relativ gut.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Was geht ab?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>Üblicherweise alles, was nicht sach- und gebrauchsgemäß befestigt wurde.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Who let the dogs out?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>TKKG (Siehe Film "Drachenauge") 
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Wann sind wir da?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>So gegen 13:46 Uhr MEZ. Es sei denn, wir fahren extrem schnell, dann trinken wir erst noch einen Kaffee mit Onkel Albert, werden keine Sekunde älter und sind da, bevor wir losgefahren sind.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Kann das weg?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>Egal was es ist, ja. Denn: Eines Tages fällt dir auf, 
+                            Dass du 99 Prozent nich brauchst, Du nimmst all den Ballast und schmeißt ihn weg, 
+                            Denn es reist sich besser mit leichtem Gepäck!
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Soll das witzig sein?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>Ertappt, das war der Plan. Jetzt, wo du es eh weißt, kann ich auch gleich ganz auspacken: Du solltest dich totlachen und ich wollte mich mit deinem Goldfisch aus dem Staub machen.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Darf ich auf's Klo?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>Der Lehrer definiert den Harndrang, nicht die Blase!
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Hast du das wirklich alles selbst gemacht?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>Nein, natürlich nicht. Ich fand kürzlich auf dem Boden meiner Kaffeetasse einen Mikrofilm mit Plänen einer außerirdischen Intelligenz. Jetzt, wo ich das Extra-Omnitron installiert habe, geht alles auf Knopfdruck.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Kann man das essen?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>Ja, mindestens ein Mal.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Wozu braucht man Netzbetreuer, wenn Geräte sich aus- und einschalten lassen?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>Pssssssssst! Willst du mich arbeitslos machen?
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Was ist die Frage zu 42?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>�ծŒŽ¤¤× ĐĻ¤Ɵƕƕ Ⱦɀ¤ɎɎɎɇ ˀˁѽӄӶծ ؇ѽƕܮ߯                ?        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Tut das Not, dass das Moped so laut is?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>Guten Morgen Meister! Der Auspuff is abgefallen. Tschuldigung.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Bist du morgen da?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>Definitv und auf jeden Fall wahrscheinlich schon wenn nichts dazwischenkommt mal sehen.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Wo sind all die Blumen hingegangen?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>Vermutlich wieder Urlaub auf Balkonien, die alten Geranien.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Was hältst du so von den diktatorischen Plänen der Regierung zu Corona und dem antirussischen Verteidigungskriegs der Ukraine?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>Jo, bin ebenso wie du ganz unvoreingenommen und freue mich auf den dritten Weltkrieg. DON'T FEAR THE TRUTH!
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Wieso geht das jetzt auf einmal wieder?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>Admin was here...
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Muss das jetzt sein?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>Jup. Die Instanzen haben entschieden, also los geht's!
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Wann sind wir endlich da?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>Nur noch 3 Stunden, das sind umgerechnet 9 Folgen Paw Patrol.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Hast du schon gehört?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>Nein. Und bevor du weiterredest: Ich will es auch nicht hören, mein Leben bringt genug eigene wundervolle Probleme hervor.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Wie spät ist es?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>Wenn die Frage kommt meistens kurz vor "zu".
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Sind wir jetzt da?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>Ja. Jedenfalls so gut wie. Nur noch die paar Kilometer A8, dann den Berg hoch (und runter) und dann kannst du fast schon die Stelle sehen, von der aus man fast zu Hause sehen kann.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Wo liegt eigentlich Bielefeld?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>Bielefeld existiert nicht, sondern ist nur eine Erfindung von IHNEN. SIE wollen dich täuschen, etwas großes ist im Gange. Sieh doch mal genau hin. IHR Plan darf sich nicht durchsetzen. Aufwachen!!
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Wer wagt es, Rittersmann oder Knapp,<br>
+                            Zu tauchen in diesen Schlund?</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>Weiß nicht, habe Mörickes Glocke nie gelesen. Vielleicht der Knoppersman?
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="question">
+                        <h2>Wenn ich ... daa so draufdrück... und dann ... wieso .. wo ist denn ... ja und dann da sooo mach, dann kommt immer das da.</h2>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+
+                    </div>
+                    <div class="answer">
+                        <p>Sieben.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+
+        const accordion = document.querySelector('.accordion');
+        const items = accordion.querySelectorAll('li');
+        const questions = accordion.querySelectorAll('.question');
+        const answers = accordion.querySelectorAll('answer');
+        let openAnswer = null;
+
+        function toggleAccordion() {
+            const thisItem = this.parentNode;
+            if(openAnswer != null && openAnswer != thisItem){
+                openAnswer.classList.toggle('open');
+            }
+            thisItem.classList.toggle('open')
+            openAnswer = thisItem;
+        }
+
+        questions.forEach(question => question.addEventListener('click', toggleAccordion));
+
+    </script>
+</body>
+
+</html> 

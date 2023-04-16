@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crazy Eggs!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Karla&family=Montserrat+Alternates&display=swap');
+        body {
+            padding: 10px;
+            /*background-color: lightgreen;*/
+            padding: 0;
+        }
+
+        body::after {
+            content: "";
+            background: url('osterwiese.jpg'), rgba(100, 255, 100, 0.4);
+            background-size: cover;
+            opacity: 0.7;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;   
+        }
+
+        .header{
+            background-color: pink;
+            color: green;
+            font-size: calc(25px + 1.5vw);
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            font-family: 'Bangers', cursive;
+        }
+
+        .buttonbar{
+            display: flex;
+            padding: 0 20px;
+            gap: 15px;
+        }
+
+        .counter, .clicks, .reset {
+            border: solid grey 2px;
+            border-radius: 5px;
+            font-size: calc(16px + 0.4vw);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 5px;
+            background-color: lightgreen;
+        }
+
+        .reset{
+            background-color: lightpink;
+            color: darkred;
+        }
+
+        .btn-crazy {
+            position: absolute;
+            top: 250px;
+            left: 35%;
+            width: 120px;
+            height: 190px;
+            text-align: center;
+            border: none;
+            border-radius: 50% 50% 50% 50% / 61% 60% 40% 39%;
+            padding: 0;
+            transition: 0.4s ease all;
+        }
+
+        .btn-crazy:active, .btn-crazy:focus, .btn-crazy:hover, .btn-crazy:visited{
+            border: none;
+        }
+
+        .ribbon{
+            display: inline-block;
+            width: 100%;
+            height: 8px;
+            background-color: black;
+            border-radius: 5px 5px 0px 0px / 40px 40px 0px 0px;
+            font-size: 2px;
+        }
+
+        .btn-crazy, .ribbon{
+            animation: 10s ease 2s infinite eggs;
+        }
+
+        #btn1{
+            background-image: radial-gradient(yellowgreen 5%, green);
+        }
+        #rb1{
+            background-image: linear-gradient(90deg, darkred 75%, red);
+            color: darkred;
+        }
+
+        #btn2{
+            background-image: radial-gradient(rgb(193, 48, 0) 5%, rgb(249, 155, 24));
+        }
+        #rb2{
+            background-image: linear-gradient(90deg, lightgreen 75%, green);
+            color: lightgreen;
+        }
+
+        #btn3{
+            background-image: radial-gradient(lightblue 5%, darkcyan);
+        }
+        #rb3{
+            background-image: linear-gradient(90deg, darkorange 75%, lightyellow);
+            color: darkorange;
+        }
+
+        #btn4{
+            background-image: radial-gradient(lemonchiffon 5%, yellow);
+        }
+        #rb4{
+            background-image: linear-gradient(90deg, #ff6f69 75%, pink);
+            color: #ff6f69
+        }
+
+        #btn5{
+            background-image: radial-gradient(#b8a9c9 5%, #622569);
+        }
+        #rb5{
+            background-image: linear-gradient(90deg, #d6d4e0 75%, #5b9aa0);
+            color: #d6d4e0;
+        }
+
+        #btn6{
+            background-image: radial-gradient(#e06377 5%, #c83349);
+        }
+        #rb6{
+            background-image: linear-gradient(90deg, #f9d5e5 75%, #ff5ea7);
+            color: #f9d5e5;
+        }
+
+        .slow{
+            transition: 1.3s ease all;
+        }
+
+        @keyframes eggs{
+            0%{
+                opacity: 1;
+            }
+
+            10%{
+                opacity: 0.75
+            }
+
+            15%{
+                opacity: 0.5
+            }
+
+            20%{
+                opacity: 0.25;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">Can you catch 'em all? It's really Egg-Streeeeaaaaaam!!!</div>
+    <div class="buttonbar">
+        <div class="counter">
+            0 eggs caught!
+        </div>
+        <div class="clicks">
+            0 taps
+        </div>
+
+        <button type="button" class="reset btn btn-lg btn-dark">
+            Reset
+        </button>
+    </div>
+
+    <!-- Here it begins to be Egg-Stream!-->
+    <button type="button" id="btn1" class="btn-crazy btn btn-lg">
+        <span class="ribbon" id="rb1"><span class="hier">Ei</span></span>
+    </button>
+    <button type="button" id="btn2" class="btn-crazy btn btn-lg slow">
+        <span class="ribbon" id="rb2"><span class="hier">Ei</span></span>
+    </button>
+    <button type="button" id="btn3" class="btn-crazy btn btn-lg ">
+        <span class="ribbon" id="rb3"><span class="hier">Ei</span></span>
+    </button>
+    <button type="button" id="btn4" class="btn-crazy btn btn-lg ">
+        <span class="ribbon" id="rb4"><span class="hier">Ei</span></span>
+    </button>
+    <button type="button" id="btn5" class="btn-crazy btn btn-lg slow">
+        <span class="ribbon" id="rb5"><span class="hier">Ei</span></span>
+    </button>
+    <button type="button" id="btn6" class="btn-crazy btn btn-lg ">
+        <span class="ribbon" id="rb6"><span class="hier">Ei</span></span>
+    </button>
+
+
+
+    <script>
+        const crazyButtons = document.querySelectorAll('.btn-crazy');
+        const ribbons = document.querySelectorAll('.hier');
+        const counter = document.querySelector('.counter');
+        const btnreset = document.querySelector('.reset');
+        const clickDiv = document.querySelector('.clicks');
+        let count = 0;
+        let clicks = 0;
+
+        function goCrazy(e) {
+            const button = e.target;
+
+            //get a random number for left offset
+            const offsetLeft = Math.random() * (window.innerWidth - button.clientWidth);
+            const offsetTop = Math.random() * (window.innerHeight - button.clientHeight);
+
+            button.style.left = offsetLeft + 'px';
+            button.style.top = offsetTop + 'px';
+        }
+
+        function del(e) {
+            const button = e.target.parentNode.parentNode;
+            document.body.removeChild(button);
+            count++;
+            counter.innerText = count + " eggs caught!";
+            if (count == crazyButtons.length) {
+                alert("You win!");
+            }
+        }
+
+        function reset() {
+            location.reload();
+        }
+
+        function clickCounter(){
+            clicks++;
+            clickDiv.innerText = clicks  + " taps";
+        }
+
+        crazyButtons.forEach(button => button.addEventListener('mouseenter', goCrazy));
+        crazyButtons.forEach(button => button.addEventListener('touchstart', goCrazy));
+        ribbons.forEach(ribbon => ribbon.addEventListener('touchstart', goCrazy));
+        ribbons.forEach(ribbon => ribbon.addEventListener('click', del));
+        btnreset.addEventListener('click', reset);
+        document.addEventListener('click', clickCounter);
+
+    </script>
+</body>
+
+</html>
