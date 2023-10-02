@@ -13,6 +13,32 @@ body{
     text-align: center;
 }
 
+.old{
+    font-style: italic;
+    text-decoration: line-through;
+    color: #222;
+}
+
+.dreh{
+    display: inline-block;
+    position: relative;
+    transform: rotate(-10deg);
+    top: -7px;
+    color: darkred;
+}
+
+#hb{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    z-index: 500;
+}
+
+#hb img{
+    width: 90%;
+}
 .easteregg{
     display: block;
     background-image: url('ei.png');

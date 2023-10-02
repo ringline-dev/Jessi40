@@ -17,16 +17,17 @@
         <a href="easter1.html" class="easteregg" id="easteregg1"></a>
     </div>
     <main>
+        <div id="hb"><img src="hb.gif"></div>
         <div class="cat"></div>
         <div class="jessi">
             <h1>Hallo Jessi.</h1>
-            <p>Irgendwann trifft es jeden. Und 40 Jahre lassen auch kein Beschönigen mehr zu. Also sieh es ein:</p>
-            <div class="alt">Du bist alt!</div>
+            <p>Irgendwann trifft es jeden. Und <span class="old">40</span> <strong>41</strong> Jahre lassen auch kein Beschönigen mehr zu. Also sieh es ein:</p>
+            <div class="alt">Du bist <span class="dreh">sehr</span> alt!</div>
             <p>Aber macht nix. Wir mögen dich trotzdem.</p>
             <p>Am Geburtstag gehen Wünsche in Erfüllung. Sagt man. Na ja, schauen wir mal:</p>
             <h4>Geschenkideen .... Muss aber eh nicht sein.</h4>
             <ul>
-                <li><a href="gutscheinblock.php">Gutscheinblock für 10 blöde Fragen. </a></li>
+                <li><a href="gutscheinblock.php">Gutscheinblock für <span class="old">10</span> <strong>??</strong> blöde Fragen. </a></li>
                 <li><a href="schulden.html">Du übernimmst  meine Schulkaffeeschulden (40 CT)</a></li>
                 <li><a href="sportvideo1.html">Du stellst mir das tolle Video für sie Tests von der Sport FS zur Verfügung obwohl es weg ist</a></li>
                 <li><a href="sportvideo2.html">Du stehst für mich ein noch tolleres Sport FS Video</a></li>
@@ -36,5 +37,15 @@
         </div>
     </main>
     <div class="lama"></div>
+
+    <script>
+        let hb = document.getElementById("hb");
+
+        function disappear(e){
+            hb.style.display="none";
+        }
+
+        hb.addEventListener('click', disappear);
+    </script>
 </body>
 </html>
