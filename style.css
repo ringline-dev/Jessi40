@@ -24,7 +24,14 @@ body{
     position: relative;
     transform: rotate(-10deg);
     top: -7px;
-    color: darkred;
+}
+
+a.last{
+    display: inline-block;
+    padding: 0 2px;
+    text-decoration: none;
+    color:rgb(80, 20, 70);
+    border: 1px solid rgb(212, 157, 167);
 }
 
 #hb{
@@ -38,7 +45,17 @@ body{
 
 #hb img{
     width: 90%;
+    border: 20px solid green;
+    border-image: repeating-linear-gradient(
+        45deg,
+        rgb(128, 0, 128),
+        rgb(128, 0, 128) 20px,
+        rgb(15, 156, 90) 20px,
+        rgb(16, 156, 90) 40px
+      )
+      20;
 }
+
 .easteregg{
     display: block;
     background-image: url('ei.png');
@@ -155,11 +172,15 @@ main{
 
 ul{
     background-color: aliceblue;
-    padding: 6px 6px 6px 20px;
+    padding: 6px 6px 6px 25px;
 }
 
 ul.special{
     list-style-image: url('baum_klein.png');
+}
+
+ul.einundvierzig{
+    list-style-image: url('yoda_li_klein.png');
 }
 
 li{

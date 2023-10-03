@@ -46,29 +46,38 @@ ini_set('display_errors', '1');
             <h5>Gestellte Fragen: <?php echo $anzahl; ?></h5>
             <form class="block" action="gutscheinblock.php" method="post">
                 <ul>
-                    <li><input type="text" name="fragen[]" <?php if (isset($fragen[0])) echo "value = '" . $fragen[0][0] . "' disabled"; ?>></li>
-                    <li><input type="text" name="fragen[]" <?php if (isset($fragen[1])) echo "value = '" . $fragen[1][0] . "' disabled"; ?>></li>
-                    <li><input type="text" name="fragen[]" <?php if (isset($fragen[2])) echo "value = '" . $fragen[2][0] . "' disabled"; ?>></li>
-                    <li><input type="text" name="fragen[]" <?php if (isset($fragen[3])) echo "value = '" . $fragen[3][0] . "' disabled"; ?>></li>
-                    <li><input type="text" name="fragen[]" <?php if (isset($fragen[4])) echo "value = '" . $fragen[4][0] . "' disabled"; ?>></li>
-                    <li><input type="text" name="fragen[]" <?php if (isset($fragen[5])) echo "value = '" . $fragen[5][0] . "' disabled"; ?>></li>
-                    <li><input type="text" name="fragen[]" <?php if (isset($fragen[6])) echo "value = '" . $fragen[6][0] . "' disabled"; ?>></li>
-                    <li><input type="text" name="fragen[]" <?php if (isset($fragen[7])) echo "value = '" . $fragen[7][0] . "' disabled"; ?>></li>
-                    <li><input type="text" name="fragen[]" <?php if (isset($fragen[8])) echo "value = '" . $fragen[8][0] . "' disabled"; ?>></li>
-                    <li><input type="text" name="fragen[]" <?php if (isset($fragen[9])) echo "value = '" . $fragen[9][0] . "' disabled"; ?>></li>
+                    <?php
+                    for($i=0;$i<10;$i++){
+                        echo "<li><input type='text' name='fragen[]'";
+                        if (isset($fragen[$i])){
+                            echo "value = '" . htmlspecialchars($fragen[$i][0], ENT_QUOTES) . "' disabled>";
+                        }
+                        echo "</li>";
+                    }
+                    ?>
                 </ul>
                 <ul class="special">
-                    <li><input type="text" name="fragen[]" <?php if (isset($fragen[10])) echo "value = '" . $fragen[10][0] . "' disabled"; ?>></li>
-                    <li><input type="text" name="fragen[]" <?php if (isset($fragen[11])) echo "value = '" . $fragen[11][0] . "' disabled"; ?>></li>
-                    <li><input type="text" name="fragen[]" <?php if (isset($fragen[12])) echo "value = '" . $fragen[12][0] . "' disabled"; ?>></li>
-                    <li><input type="text" name="fragen[]" <?php if (isset($fragen[13])) echo "value = '" . $fragen[13][0] . "' disabled"; ?>></li>
-                    <li><input type="text" name="fragen[]" <?php if (isset($fragen[14])) echo "value = '" . $fragen[14][0] . "' disabled"; ?>></li>
-                    <li><input type="text" name="fragen[]" <?php if (isset($fragen[15])) echo "value = '" . $fragen[15][0] . "' disabled"; ?>></li>
-                    <li><input type="text" name="fragen[]" <?php if (isset($fragen[16])) echo "value = '" . $fragen[16][0] . "' disabled"; ?>></li>
-                    <li><input type="text" name="fragen[]" <?php if (isset($fragen[17])) echo "value = '" . $fragen[17][0] . "' disabled"; ?>></li>
-                    <li><input type="text" name="fragen[]" <?php if (isset($fragen[18])) echo "value = '" . $fragen[18][0] . "' disabled"; ?>></li>
-                    <li><input type="text" name="fragen[]" <?php if (isset($fragen[19])) echo "value = '" . $fragen[19][0] . "' disabled"; ?>></li>
+                <?php
+                    for($i=10;$i<20;$i++){
+                        echo "<li><input type='text' name='fragen[]'";
+                        if (isset($fragen[$i])){
+                            echo "value = '" . htmlspecialchars($fragen[$i][0], ENT_QUOTES) . "' disabled>";
+                        }
+                        echo "</li>";
+                    }
+                    ?>
                     <a href="easter3.html"><li id="easterquestion"><input type="text"></li></a>
+                </ul>
+                <ul class="einundvierzig">
+                <?php
+                    for($i=20;$i<30;$i++){
+                        echo "<li><input type='text' name='fragen[]'";
+                        if (isset($fragen[$i])){
+                            echo "value = '" . htmlspecialchars($fragen[$i][0], ENT_QUOTES) . "' disabled>";
+                        }
+                        echo "</li>";
+                    }
+                    ?>
                 </ul>
                 <input type="submit" value="Frage fragen" name="gefragt">
         </form>
